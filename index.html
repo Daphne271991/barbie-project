@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/tsr2kmc.css" />
+    <script
+      src="https://kit.fontawesome.com/783e3281ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Super Mario Bros | The Movie 2023</title>
+    <style>
+      :root {
+        --font: "proxima-nova", sans-serif;
+        --pink: rgb(242, 1, 161);
+        --blue: rgb(16, 181, 255);
+        --light-blue: #023281;
+        --button-hover-transiton: all 200ms ease-in-out;
+        --button-border-radius: 30px;
+        --box-shadow: 10px 10px 20px rgba(0, 55, 142, 0.3);
+      }
+
+      body {
+        font-family: "proxima-nova", sans-serif;
+        margin: 0;
+        paddin: 0;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 96px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 72px;
+        line-height: 72px;
+        padding-top: 50px;
+        margin-top: 0;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+
+      h4 {
+        text-align: center;
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      p {
+        font-weight: 400;
+      }
+
+      button {
+        background: var(--pink);
+        text-decoration: none;
+        padding: 15px 20px;
+        border: none;
+        border-radius: var(--button-border-radius);
+        transition: var(--button-hover-transiton);
+        box-shadow: var(--box-shadow);
+        font-weight: 500;
+        font-size: 18px;
+        font-family: var(--font);
+      }
+
+      header {
+        display: flex;
+        margin: 0 auto;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("/images/barbiebanner.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button:hover {
+        background: white;
+      }
+
+      a:hover {
+        color: var(--pink);
+      }
+
+      .hero {
+        color: white;
+      }
+      .hero h1 {
+        line-height: 60px;
+        font-size: 96px;
+        display: inline;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+        margin: 0;
+        padding-top: 20px;
+      }
+
+      .hero h3 {
+        letter-spacing: 4px;
+      }
+
+      .arrow-down .fa-arrow-down {
+        font-size: 72px;
+      }
+
+      .fa-arrow-down a {
+        color: white;
+      }
+
+      .meet-cast,
+      .interviews h2 {
+        color: var(--blue);
+      }
+
+      .buzz h2 {
+        color: white;
+      }
+
+      .meet-cast,
+      .interviews {
+        padding-bottom: 50px;
+      }
+
+      .grid {
+        display: grid;
+        grid-gap: 10px;
+      }
+
+      footer .grid {
+        grid-gap: 30px;
+      }
+
+      .grid-characters {
+        margin: 0 50px;
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .grid-videos,
+      .grid-buzz {
+        margin: 0 100px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+      }
+
+      .grid-interviews {
+        margin: 0 100px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+      }
+
+      .grid-3-columns-with-first-narrow {
+        margin: 30px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .character {
+        width: 100%;
+        border-radius: 6px;
+        margin: 0 auto;
+        box-shadow: var(--box-shadow);
+      }
+
+      .character:hover {
+        filter: brightness(108%) contrast(101%) grayscale(101%) saturate(101%);
+      }
+
+      .char-name,
+      .actor {
+        display: block;
+        text-align: center;
+      }
+
+      .char-name {
+        font-size: 22px;
+        line-height: 22px;
+        color: var(--pink);
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+
+      .actor {
+        font-size: 16px;
+        color: var(--blue);
+        margin-top: 2px;
+      }
+
+      .card {
+        background: white;
+        margin: 0 0 30px;
+        box-shadow: var(--box-shadow);
+      }
+
+      .card-title {
+        padding: 20px 20px 10px;
+      }
+      .card-body {
+        padding: 10px 30px;
+      }
+
+      .card-footer {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .buzz {
+        background-color: var(--pink);
+        margin: 0 auto;
+        padding-bottom: 100px;
+      }
+
+      .buzz p {
+        color: var(--blue);
+      }
+
+      .buzz button {
+        background: var(--blue);
+        font-weight: 800;
+        padding-bottom: 20px;
+      }
+
+      .buzz button:hover {
+        background: white;
+        border: solid 3px var(--pink);
+      }
+
+      .buzz a:hover {
+        color: var(--blue);
+        font-weight: 800;
+      }
+
+      .buzz-image {
+        max-width: 100%;
+        display: block;
+      }
+
+      .buzz-video {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+
+      .trailers {
+        background-color: var(--blue);
+        margin: 0 auto;
+        padding-bottom: 100px;
+      }
+
+      .trailers h2 {
+        color: white;
+      }
+
+      .video {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+      }
+
+      .interviews {
+        margin: 0 auto;
+        padding-bottom: 100px;
+      }
+
+      .twitter-tweet iframe {
+        width: 100% !important;
+        margin: 0 auto !important;
+        border-radius: 12px !important;
+        box-shadow: var(--box-shadow);
+      }
+
+      .power-ups {
+        background-color: blue;
+        padding: 20px 200px 80px;
+      }
+
+      .power-ups h2 {
+        color: white;
+      }
+
+      table {
+        color: white;
+        border-spacing: 0;
+      }
+
+      th {
+        background-color: var(--pink);
+        height: 40px;
+      }
+
+      td {
+        border-bottom: 2px solid white;
+      }
+
+      footer {
+        color: white;
+        background-image: linear-gradient(
+            rgba(0, 55, 142, 0.8),
+            rgba(0, 55, 142, 0.8)
+          ),
+          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/778/original/super_mario_bros_movie.jpg?1686777440");
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 30px;
+      }
+
+      footer h3 {
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      footer p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      footer ul {
+        padding: 0;
+      }
+
+      footer li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      footer a {
+        color: white;
+      }
+
+      footer a:hover {
+        color: var(--pink);
+      }
+
+      .playlist {
+        padding: 0 50px;
+      }
+      .site-info {
+        color: white;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      .site-info a {
+        color: var(--pink);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .site-info a:hover {
+        text-decoration: underline;
+      }
+
+      .copyright {
+        font-size: 12px;
+        line-height: 12px;
+      }
+
+      @media (max-width: 1200px) {
+        .grid-interviews {
+          grid-template-columns: 1fr 1fr;
+          text-align: center !important;
+        }
+
+        .grid-3-columns-with-first-narrow {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .card-body {
+          display: none;
+        }
+
+        .card-footer {
+          margin: 0;
+        }
+        .power-ups {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        .hero h1 {
+          font-size: 72px;
+        }
+        .hero h2 {
+          font-size: 24px;
+        }
+        .grid-characters {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-videos,
+        .grid-buzz {
+          grid-template-columns: repeat(1, 1fr);
+          text-align: center !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .grid-characters {
+          grid-template-columns: repeat(2, 1fr);
+          margin: 0 30px;
+        }
+        .grid-interviews,
+        .grid-videos,
+        .grid-buzz .grid-3-columns-with-first-narrow {
+          grid-template-columns: 1fr;
+          text-align: center !important;
+          margin: 0 30px;
+        }
+        .char-name {
+          font-size: 30px;
+        }
+        .actor {
+          font-size: larger;
+        }
+        h2 {
+          font-size: 48px;
+          line-height: 48px;
+        }
+
+        footer {
+          padding: 10px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .grid-characters {
+          grid-template-columns: repeat(1, 1fr);
+          text-align: center;
+        }
+
+        .char-name {
+          font-size: 30px;
+        }
+        .actor {
+          font-size: larger;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <h3>.NEW MOVIE.</h3>
+        <h1>BARBIE</h1>
+        <div class="arrow-down">
+          <a href="#trailers"><i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+      </div>
+      <!-- <div>
+        <a href="#trailers"><i class="fa-solid fa-arrow-down"></i></a>
+      </div> -->
+    </header>
+    <main>
+      <section class="trailers" id="trailers">
+        <h2>Get a Sneak Peek</h2>
+        <div class="grid grid-videos">
+          <div>
+            <iframe
+              class="video"
+              src="https://www.youtube.com/embed/pBk4NYhWNMM?si=KnQjhiTVQATeJy-B"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <iframe
+              class="video"
+              src="https://www.youtube.com/embed/CR4e9XcVRMg?si=V4M7ZgxV096KxDx0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div>
+            <iframe
+              class="video"
+              src="https://www.youtube.com/embed/8zIf0XvoL9Y?si=uqv0hmvHGfy6hq8R"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="meet-cast" id="meet-cast">
+        <h2>Meet the Cast</h2>
+        <div class="grid grid-characters">
+          <div>
+            <img
+              src="images/characters/barbie.jpeg"
+              alt="Barbie"
+              class="character"
+            />
+            <h4 class="char-name">Barbie</h4>
+            <h5 class="actor">Margot Robbie</h5>
+          </div>
+          <div>
+            <img src="images/characters/ken.jpeg" alt="Ken" class="character" />
+            <h4 class="char-name">Ken</h4>
+            <h5 class="actor">Ryan Goslin</h5>
+          </div>
+          <div>
+            <img
+              src="images/characters/gloria.jpeg"
+              alt="Gloria"
+              class="character"
+            />
+            <h4 class="char-name">Gloria</h4>
+            <h5 class="actor">America Ferrera</h5>
+          </div>
+          <div>
+            <img
+              src="images/characters/sasha.jpeg"
+              alt="Sasha"
+              class="character"
+            />
+            <h4 class="char-name">Sasha</h4>
+            <h5 class="actor">Ariana Greenblatt</h5>
+          </div>
+          <div>
+            <img
+              src="images/characters/issa.jpeg"
+              alt="President"
+              class="character"
+            />
+            <h4 class="char-name">President Barbie</h4>
+            <h5 class="actor">Issa Rae</h5>
+          </div>
+          <div>
+            <img
+              src="images/characters/ceoofmattel.jpeg"
+              alt="CEO"
+              class="character"
+            />
+            <h4 class="char-name">CEO of Matell</h4>
+            <h5 class="actor">Will Ferrell</h5>
+          </div>
+        </div>
+      </section>
+      <section class="buzz">
+        <h2>In the News</h2>
+        <div class="grid grid-buzz">
+          <div class="card">
+            <div class="card-header">
+              <img
+                src="https://image.cnbcfm.com/api/v1/image/107266417-1688451865450-gettyimages-1501788813-wnk24093_fy7kx0rr.jpeg?v=1688472717&w=929&h=523&ffmt=webp&vtcrop=y"
+                alt=""
+                class="buzz-image"
+              />
+            </div>
+            <div class="card-title">
+              <h4>Barbie on The New York Times</h4>
+            </div>
+            <div class="card-body">
+              <p>‘Barbie’ Review: Out of the Box and On the Road...</p>
+            </div>
+            <div class="card-footer">
+              <button>
+                <a
+                  href="https://www.nytimes.com/2023/07/18/movies/barbie-movie-review.html"
+                  class="button"
+                  target="_blank"
+                >
+                  Read more
+                </a>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <img
+                src="https://imageio.forbes.com/specials-images/imageserve/64a2c32064d9faa73bb4ddd4/SKOREA-ENTERTAINMENT-FILM/0x0.jpg?format=jpg&crop=2568,1445,x23,y148,safe&width=960"
+                alt=""
+                class="buzz-image"
+              />
+            </div>
+            <div class="card-title">
+              <h4>Barbie on Forbes</h4>
+            </div>
+            <div class="card-body">
+              <p>‘Barbie’ Movie Banned In Vietnam Over Controversial Map...</p>
+            </div>
+            <div class="card-footer">
+              <button>
+                <a
+                  href="https://www.nytimes.com/2023/07/18/movies/barbie-movie-review.html"
+                  class="button"
+                  target="_blank"
+                >
+                  Read more
+                </a>
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <img
+                src="https://media.cnn.com/api/v1/images/stellar/prod/230525140904-13-barbie-movie.jpg?c=16x9&q=h_540,w_960,c_fill/f_webp"
+                alt=""
+                class="buzz-image"
+              />
+            </div>
+            <div class="card-title">
+              <h4>Barbie on CNN</h4>
+            </div>
+            <div class="card-body">
+              <p>
+                The ‘Barbie’ and ‘Oppenheimer’ double feature shouldn’t be a
+                one-off...
+              </p>
+            </div>
+            <div class="card-footer">
+              <button>
+                <a
+                  href="https://www.nytimes.com/2023/07/18/movies/barbie-movie-review.html"
+                  class="button"
+                  target="_blank"
+                >
+                  Read more
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interviews">
+        <h2>Cast Interviews</h2>
+        <div class="grid grid-interviews">
+          <div>
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                “He’s so funny, but he&#39;s funny because he takes it so
+                seriously. That&#39;s where his comedy comes from.”<a
+                  href="https://twitter.com/hashtag/BarbieMovie?src=hash&amp;ref_src=twsrc%5Etfw"
+                  >#BarbieMovie</a
+                >
+                director Greta Gerwig says she never saw Ken &quot;as anyone
+                else&quot; but Ryan Gosling when writing the script.
+                <a href="https://t.co/BrbGkTfLaq">pic.twitter.com/BrbGkTfLaq</a>
+              </p>
+              &mdash; Good Morning America (@GMA)
+              <a
+                href="https://twitter.com/GMA/status/1682010148112416768?ref_src=twsrc%5Etfw"
+                >July 20, 2023</a
+              >
+            </blockquote>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+          <div>
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                Dark sunglasses are great because they can hide your sadness.
+                You don&#39;t want to bum
+                <a
+                  href="https://twitter.com/hashtag/Barbie?src=hash&amp;ref_src=twsrc%5Etfw"
+                  >#Barbie</a
+                >
+                out.<br /><br />If you’re a Ken, Ken-curious or you’re just
+                Ken-fused, Ryan Gosling shares his top 10 Ken-essentials to help
+                you tap into your Kenergy. Watch the full video:
+                <a href="https://t.co/3TQ1MPw2IO">https://t.co/3TQ1MPw2IO</a>
+                <a href="https://t.co/oxcXBVoXPJ">pic.twitter.com/oxcXBVoXPJ</a>
+              </p>
+              &mdash; GQ Magazine (@GQMagazine)
+              <a
+                href="https://twitter.com/GQMagazine/status/1680916924308373504?ref_src=twsrc%5Etfw"
+                >July 17, 2023</a
+              >
+            </blockquote>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+          <div>
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                Margot Robbie is living her dream of meeting Ryan Gosling! ☺️
+                (Same, girl!) Full interview:
+                <a href="https://t.co/KnnfQsJnDd">https://t.co/KnnfQsJnDd</a
+                ><a
+                  href="https://twitter.com/barbiethemovie?ref_src=twsrc%5Etfw"
+                  >@barbiethemovie</a
+                >
+                <a
+                  href="https://twitter.com/hashtag/BarbieTheMovie?src=hash&amp;ref_src=twsrc%5Etfw"
+                  >#BarbieTheMovie</a
+                >
+                <a href="https://t.co/Fl4fXsLWzm">pic.twitter.com/Fl4fXsLWzm</a>
+              </p>
+              &mdash; ExtraTV (@extratv)
+              <a
+                href="https://twitter.com/extratv/status/1682420166808809473?ref_src=twsrc%5Etfw"
+                >July 21, 2023</a
+              >
+            </blockquote>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+          <div>
+            <blockquote class="twitter-tweet">
+              <p lang="en" dir="ltr">
+                &quot;You are doing great because you are you, and that is
+                enough.&quot;<br /><br />Margot Robbie and America Ferrera share
+                their advice for audiences in an interview with
+                <a href="https://twitter.com/sarasidnerCNN?ref_src=twsrc%5Etfw"
+                  >@sarasidnerCNN</a
+                >
+                before the actors were on strike:
+                <a href="https://t.co/yVDa9XSVkH">pic.twitter.com/yVDa9XSVkH</a>
+              </p>
+              &mdash; CNN This Morning (@CNNThisMorning)
+              <a
+                href="https://twitter.com/CNNThisMorning/status/1682372636104335360?ref_src=twsrc%5Etfw"
+                >July 21, 2023</a
+              >
+            </blockquote>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+        </div>
+      </section>
+
+      <section class="power-ups">
+        <h2>Barbie's Playlist🎶</h2>
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0wIBbVnPvie?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="grid grid-3-columns-with-first-narrow">
+        <div>
+          <h3>More about Movie</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.thesupermariobros.movie/synopsis/"
+                target="_blank"
+                >Synopsis</a
+              >
+            </li>
+            <li>
+              <a href="https://www.thesupermariobros.movie/" target="_blank"
+                >Find Showtimes</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>About Me</h3>
+          <p>
+            Hi! I'm Nicole and my son is a big fan of Mario Bros so I decided to
+            use the movie for a coding workshop project.
+          </p>
+        </div>
+        <div>
+          <h3>About this website</h3>
+          <p>This website was built for a coding workshop project.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="site-info">
+          <p>
+            Design by
+            <span id="highlight-nicole">
+              <a
+                href="https://www.shecodes.io/graduates/80721-nicole-orbe"
+                target="_blank"
+                >Nicole Orbe ☕</a
+              ></span
+            >
+            and is
+            <a
+              href="https://github.com/nicoleorbe/movie_project"
+              target="_blank"
+              >open-sourced on GitHub</a
+            >
+            and
+            <a href="https://www.thenicoleorbe.com/" target="_blank">
+              hosted on Netlify</a
+            >
+          </p>
+          <p class="copyright">
+            All product and company names are trademarks ™ or registered®
+            trademarks of their respective owners. Their use does not imply
+            affiliation or endorsement by these companies. All product names,
+            logos, brands and other trademarks or images shown or mentioned are
+            the property of the respective brand owners.
+          </p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
