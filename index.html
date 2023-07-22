@@ -25,7 +25,7 @@
       body {
         font-family: "proxima-nova", sans-serif;
         margin: 0;
-        paddin: 0;
+        padding: 0;
       }
       h1,
       h2,
@@ -136,7 +136,7 @@
 
       .meet-cast,
       .interviews h2 {
-        color: var(--blue);
+        color: #ffb5de;
       }
 
       .buzz h2 {
@@ -154,7 +154,10 @@
       }
 
       footer .grid {
-        grid-gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        grid-gap: 10px;
       }
 
       .grid-characters {
@@ -292,12 +295,12 @@
         box-shadow: var(--box-shadow);
       }
 
-      .power-ups {
-        background-color: blue;
+      .playlist-barbie {
+        background-color: #ffb5de;
         padding: 20px 200px 80px;
       }
 
-      .power-ups h2 {
+      .playlist-barbie h2 {
         color: white;
       }
 
@@ -318,15 +321,16 @@
       footer {
         color: white;
         background-image: linear-gradient(
-            rgba(0, 55, 142, 0.8),
-            rgba(0, 55, 142, 0.8)
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
           ),
-          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/085/778/original/super_mario_bros_movie.jpg?1686777440");
+          url("https://media.vogue.co.uk/photos/64130ed6b969888aada448cb/2:3/w_1600,c_limit/rev-1-BARBIE-TP-0002_High_Res_JPEG.jpeg");
 
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         padding: 30px;
+        text-align: center;
       }
 
       footer h3 {
@@ -357,9 +361,6 @@
         color: var(--pink);
       }
 
-      .playlist {
-        padding: 0 50px;
-      }
       .site-info {
         color: white;
         text-align: center;
@@ -398,9 +399,6 @@
 
         .card-footer {
           margin: 0;
-        }
-        .power-ups {
-          display: none;
         }
       }
 
@@ -617,7 +615,7 @@
             <div class="card-footer">
               <button>
                 <a
-                  href="https://www.nytimes.com/2023/07/18/movies/barbie-movie-review.html"
+                  href="https://www.forbes.com/sites/roberthart/2023/07/03/barbie-movie-banned-in-vietnam-over-controversial-map/?sh=2ea67a054ba7"
                   class="button"
                   target="_blank"
                 >
@@ -647,7 +645,7 @@
             <div class="card-footer">
               <button>
                 <a
-                  href="https://www.nytimes.com/2023/07/18/movies/barbie-movie-review.html"
+                  href="https://www.cnn.com/2023/07/22/entertainment/oppenheimer-barbie-double-feature-movie-plc/index.html"
                   class="button"
                   target="_blank"
                 >
@@ -773,11 +771,11 @@
         </div>
       </section>
 
-      <section class="power-ups">
+      <section class="playlist-barbie">
         <h2>Barbie's Playlist🎶</h2>
         <iframe
           style="border-radius: 12px"
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0wIBbVnPvie?utm_source=generator"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0wIBbVnPvie?utm_source=generator&theme=0"
           width="100%"
           height="352"
           frameborder="0"
@@ -794,13 +792,13 @@
           <ul>
             <li>
               <a
-                href="https://www.thesupermariobros.movie/synopsis/"
+                href="https://www.barbie-themovie.com/synopsis/"
                 target="_blank"
                 >Synopsis</a
               >
             </li>
             <li>
-              <a href="https://www.thesupermariobros.movie/" target="_blank"
+              <a href="https://www.barbie-themovie.com/" target="_blank"
                 >Find Showtimes</a
               >
             </li>
@@ -808,15 +806,8 @@
         </div>
 
         <div>
-          <h3>About Me</h3>
-          <p>
-            Hi! I'm Nicole and my son is a big fan of Mario Bros so I decided to
-            use the movie for a coding workshop project.
-          </p>
-        </div>
-        <div>
           <h3>About this website</h3>
-          <p>This website was built for a coding workshop project.</p>
+          <p>This website was built for a coding workshop project.<br /></p>
         </div>
       </section>
 
@@ -826,19 +817,24 @@
             Design by
             <span id="highlight-nicole">
               <a
-                href="https://www.shecodes.io/graduates/80721-nicole-orbe"
+                href="www.linkedin.com/in/daphnebonilla
+
+"
                 target="_blank"
-                >Nicole Orbe ☕</a
+                >Daphne Bonilla👩🏽‍💻</a
               ></span
             >
             and is
             <a
-              href="https://github.com/nicoleorbe/movie_project"
+              href="https://github.com/Daphne271991/barbie-project"
               target="_blank"
               >open-sourced on GitHub</a
             >
             and
-            <a href="https://www.thenicoleorbe.com/" target="_blank">
+            <a
+              href="https://unique-melomakarona-5464fb.netlify.app"
+              target="_blank"
+            >
               hosted on Netlify</a
             >
           </p>
