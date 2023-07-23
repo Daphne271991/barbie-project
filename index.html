@@ -301,13 +301,7 @@
         overflow: hidden;
         border-radius: 12px;
       }
-      .playlist-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+
       .playlist-barbie {
         background-color: #ffb5de;
         padding: 20px 200px 80px;
@@ -434,6 +428,17 @@
       }
 
       @media (max-width: 768px) {
+        .playlist-barbie {
+          padding: 20px;
+        }
+
+        .playlist-container {
+          padding-top: 0;
+        }
+
+        .playlist-container iframe {
+          border-radius: 0;
+        }
         .grid-characters {
           grid-template-columns: repeat(2, 1fr);
           margin: 0 30px;
