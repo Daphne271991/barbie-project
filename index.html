@@ -13,9 +13,9 @@
     <title>Daphne Bonilla</title>
     <style>
       :root {
-        --font: "anton", sans-serif;
+        --font: "tt-hoves", sans-serif;
         --pink: #F4B6D1;
-        --blue: #455369;
+        --blue: black;
 ;
         --light-blue: #023281;
         --button-hover-transiton: all 200ms ease-in-out;
@@ -86,13 +86,18 @@
       header {
         display: flex;
         margin: 0 auto;
-        background-image: 
-          url("/images/daphne.jpg");
-        background-size:contain;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("/images/daphneb.png");
+        background-size: contain;
+        background-color: black;
         background-position: center;
         background-repeat: no-repeat;
         text-align: center;
-        min-height: 100vh;
+        min-height: 60vh;
+        width: 100%;
         justify-content: center;
         align-items: center;
       }
@@ -128,21 +133,21 @@
 
       .meet-cast,
       .interviews h2 {
-        color: #455369;
+        color: black;
         background-color: white;
 
 
       }
       
       .insta h2 {
-        color: #455369;
+        color: black;
       }
       .in-tech h2 {
-        color: #455369;
+        color: white;
       }
 
       .buzz h2 {
-        color: #455369;
+        color: black;
       }
 
       .meet-cast,
@@ -176,7 +181,7 @@
   overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 .in-tech {
-  background-color: var(--pink); 
+  background-color: black; 
   padding: 20px;
   border-radius: 8px;
   margin: 0 auto;
@@ -216,14 +221,14 @@
       .char-name {
         font-size: 22px;
         line-height: 22px;
-        color: #455369;
+        color: black;
         margin-top: 10px;
         margin-bottom: 0;
       }
 
       .actor {
         font-size: 16px;
-        color: #455369;
+        color: black;
         margin-top: 2px;
       }
 
@@ -237,24 +242,24 @@
 
       .card-title {
         padding: 20px 20px 10px;
-        color: #455369;
+        color: black;
 
       }
       .card-body {
         padding: 10px 30px;
-        color: #455369;
+        color: black;
 
       }
 
       .card-footer {
         padding: 20px;
         text-align: center;
-        color: #455369;
+        color: black;
 
       }
 
       .buzz {
-        background-color: var(--pink);
+        background-color: white;
         margin: 0 auto;
         padding-bottom: 100px;
       }
@@ -290,13 +295,13 @@
       }
 
       .trailers {
-        background-color: #D1F4B6;
+        background-color: white;
         margin: 0 auto;
         padding-bottom: 100px;
       }
 
       .trailers h2 {
-        color: #455369;
+        color: black;
       }
 
       .video {
@@ -305,7 +310,7 @@
         border-radius: 8px;
       }
       .insta {
-        background-color: #d1f4b6;
+        background-color: white;
         margin: 0 auto;
         padding-bottom: 100px;
       }
@@ -381,12 +386,6 @@ iframe {
 
       footer {
         color: white;
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)
-          ),
-          url("/images/footer.jpg");
-
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -397,15 +396,18 @@ iframe {
       footer h3 {
         font-size: 16px;
         line-height: 16px;
+        color: black;
       }
 
       footer p {
+        color:black;
         font-size: 16px;
         line-height: 24px;
       }
 
       footer ul {
         padding: 0;
+
       }
 
       footer li {
@@ -415,15 +417,15 @@ iframe {
       }
 
       footer a {
-        color: white;
+        color: black;
       }
 
       footer a:hover {
-        color: var(--pink);
+        color: #D84823;
       }
 
       .site-info {
-        color: white;
+        color: black;
         text-align: center;
         margin-bottom: 5px;
         font-size: 16px;
@@ -529,7 +531,7 @@ iframe {
     <header>
       <div class="hero">
        
-          <a href="#trailers"><i class="fa-solid fa-arrow-down"></i></a>
+         
         </div>
       </div>
       <!-- <div>
@@ -926,6 +928,7 @@ I contributed to the successful launch of Newsbreak’s Spanish app in Mexico, m
 
     
     </main>
+    <hr>
     <footer class="footer">
       <section class="grid grid-3-columns-with-first-narrow">
         <div>
