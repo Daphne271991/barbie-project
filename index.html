@@ -239,6 +239,24 @@
         margin: 0;
                 box-shadow: var(--box-shadow);
       }
+      .card-2 {
+    flex: 0 0 auto;
+    width: 300px;
+    background: white;
+    margin: 0;
+    box-shadow: var(--box-shadow);
+    overflow: hidden; /* Ensures no overflow from the video */
+    border-radius: 10px; /* Optional: Rounds the corners */
+}
+
+.buzz-video2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the card while maintaining aspect ratio */
+    display: block; /* Removes any unwanted inline space */
+    border-radius: inherit; /* Matches the card's rounded corners, if applied */
+}
+
 
       .card-title {
         padding: 20px 20px 10px;
@@ -912,6 +930,65 @@ I contributed to the successful launch of Newsbreak’s Spanish app in Mexico, m
               </p>
             </div>
             <div class="card-footer">
+             
+            </div>
+          </div>
+
+          </div>
+      </section>
+
+      <section class="insta">
+        <h2>Social Media Work</h2>
+        <div class="grid grid-buzz">
+          <div class="card-2"
+          >
+
+            <div class="card-header">
+              <video
+              src="images/characters/tiktok.mp4"
+              class="buzz-video2" 
+              controls 
+              autoplay 
+              loop 
+              muted>
+              Your browser does not support the video tag.
+                </video>
+            </div>
+           
+
+              
+            
+          </div>
+
+          <div class="card-2">
+            <div class="card-header">
+              <img
+              src="images/characters/instastory.png"
+                alt=""
+                class="buzz-image"
+              />
+            </div>
+         
+            <div class="card-body">
+              
+            </div>
+            <div class="card-footer">
+              
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <img
+                src="images/characters/logo1.png"
+                alt=""
+                class="buzz-image"
+              />
+            </div>
+           
+           
+              
+            
              
             </div>
           </div>
