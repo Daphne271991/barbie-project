@@ -13,7 +13,7 @@
     <title>Daphne Bonilla</title>
     <style>
       :root {
-        --font: "tt-hoves", sans-serif;
+        --font: "Retina Black",Helvetica,sans-serif;
         --pink: #F4B6D1;
         --blue: black;
 ;
@@ -24,7 +24,7 @@
       }
 
       body {
-        font-family: "proxima-nova", sans-serif;
+        font-family: "inherit", sans-serif;
         margin: 0;
         padding: 0;
       }
@@ -38,12 +38,12 @@
       }
 
       h1 {
-        font-size: 96px;
+        font-size: 26px;
       }
 
       h2 {
         text-align: center;
-        font-size: 72px;
+        font-size: 22px;
         line-height: 72px;
         padding-top: 50px;
         margin-top: 0;
@@ -86,18 +86,15 @@
       header {
         display: flex;
         margin: 0 auto;
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url("/images/daphneb.png");
+        background-image: 
+          url("/images/daphneb1.png");
         background-size: contain;
-        background-color: black;
+        background-color: white;
         background-position: center;
         background-repeat: no-repeat;
         text-align: center;
-        min-height: 60vh;
-        width: 100%;
+        height: 300px;
+         width: 100%;
         justify-content: center;
         align-items: center;
       }
@@ -109,27 +106,6 @@
       a:hover {
         color: var(--pink);
       }
-
-      .hero {
-        color: white;
-      }
-      .hero h1 {
-        line-height: 60px;
-        font-size: 96px;
-        display: inline;
-      }
-
-      .hero h2 {
-        font-size: 36px;
-        margin: 0;
-        padding-top: 20px;
-      }
-
-      .hero h3 {
-        letter-spacing: 4px;
-      }
-
-      
 
       .meet-cast,
       .interviews h2 {
@@ -143,7 +119,7 @@
         color: black;
       }
       .in-tech h2 {
-        color: white;
+        color: black;
       }
 
       .buzz h2 {
@@ -180,8 +156,33 @@
   gap: 30px; /* Keep the spacing between cards */
   overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
+.grid-buzz-articles {
+  display: grid;
+  grid-template-columns: 1fr; /* Each card spans the full width */
+  gap: 20px; /* Add space between rows */
+}
+.grid-buzz-articles .card:nth-child(odd) {
+  background-color: #f9f9f9; /* Light gray for odd rows */
+}
+.grid-buzz-articles .card:nth-child(even) {
+  background-color: #eaeaea; /* Slightly darker gray for even rows */
+}
+.card {
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a clean look */
+}
+.card-header img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Match the card's rounded corners */
+}
+
+
+
+
 .in-tech {
-  background-color: black; 
+  background-color: white; 
   padding: 20px;
   border-radius: 8px;
   margin: 0 auto;
@@ -980,7 +981,7 @@ I contributed to the successful launch of Newsbreak’s Spanish app in Mexico, m
           <div class="card">
             <div class="card-header">
               <img
-                src="images/characters/logo1.png"
+                src="images/characters/Logo1.png"
                 alt=""
                 class="buzz-image"
               />
@@ -1031,6 +1032,8 @@ I contributed to the successful launch of Newsbreak’s Spanish app in Mexico, m
           <p>This website was coded by Daphne Bonilla👩🏽‍💻<br /></p>
         </div>
       </section>
+
+      
 
     
     </footer>
